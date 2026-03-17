@@ -1,0 +1,17 @@
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 這裡定義了三種 Python 版本
+        python-version: ["3.9", "3.10", "3.11"]
+    
+    steps:
+      - uses: actions/checkout@v4
+      - name: 設定 Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: 執行檢查
+        run: echo "我現在正在 Python ${{ matrix.python-version }} 環境下檢查程式碼"
