@@ -1,0 +1,19 @@
+name: 我的第一個自動化流程
+
+# 觸發條件：當我把程式碼 push (推送到) GitHub 時執行
+on: [push]
+
+jobs:
+  # 定義一個叫做 hello-job 的任務
+  hello-job:
+    # 使用 Ubuntu 虛擬機執行
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 步驟 1: 打印簡單文字
+      - name: 跟我打招呼
+        run: echo "Hello GitHub Actions! 我成功觸發了流程。"
+
+      # 步驟 2: 顯示目前的伺服器時間
+      - name: 顯示時間
+        run: date
