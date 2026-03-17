@@ -1,3 +1,6 @@
+name: Python Code Check Workflow
+on: [push]
+
 jobs:
   lint-test:
     runs-on: ubuntu-latest
