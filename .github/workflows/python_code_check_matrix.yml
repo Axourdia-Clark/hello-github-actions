@@ -1,4 +1,4 @@
-name: Python Code Check Workflow
+name: Python Code Check Matrix Workflow
 on: [push]
 
 jobs:
